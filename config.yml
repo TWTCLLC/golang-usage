@@ -1,0 +1,12 @@
+server: 
+  mode: "debug" # release or debug
+  port: ":8100"
+
+workspace:
+  cache: "./workspace/data/cache"
+  key: "./workspace/key"
+
+performance:
+  maxcpucore: 3
+  maxmemory: 4000000000
+  tasklimit: 4
