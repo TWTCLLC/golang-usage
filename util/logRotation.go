@@ -20,7 +20,7 @@ func StartExe() {
 		fmt.Printf(`eg. ".\\logRotation duration exe_path exe_args..."`)
 		input := bufio.NewScanner(os.Stdin)
 		input.Scan()
-		return 
+		return
 	}
 	duration := args[1]
 
@@ -50,10 +50,9 @@ func StartExe() {
 	cmd.Start()
 
 	for {
-		if rotateProcessing {
+		if s.Scan() || rotateProcessing {
 			continue
 		}
-		s.Scan()
 		fmt.Printf(s.Text() + "\n")
 		logFile.WriteString(s.Text() + "\n")
 	}
