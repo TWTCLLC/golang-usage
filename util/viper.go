@@ -50,7 +50,7 @@ func configToModel(configMap *map[string]any) {
 		pointerAdd := reflect.ValueOf(v)
 		config := reflect.Indirect(pointerAdd)
 		//check if config exist, not need to load again
-		if !config.IsZero(){
+		if !config.IsZero() {
 			continue
 		}
 		switch p := v.(type) {
